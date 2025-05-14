@@ -1,12 +1,28 @@
-# Welcome to Remix!
+# Grocery Shop Web App
 
-- 📖 [Remix docs](https://remix.run/docs)
+A modern e-commerce grocery shop web application built with Remix, Vite, TypeScript, and Tailwind CSS.
+
+## Features
+
+- Product catalog with categories: Fruits & Vegetables, Meat & Seafood, Bakery, Dairy & Eggs
+- Product detail pages with images, descriptions, and reviews
+- Home page with carousel, category navigation, recommended products, weekly specials, and recipe inspiration
+- Shopping cart functionality (local storage)
+- Contact page with virtual assistant and messaging
+- Modern responsive UI with custom styles and Bootstrap overrides
+
+## Tech Stack
+
+- [Remix](https://remix.run/) (React framework)
+- [Vite](https://vitejs.dev/) (build tool)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/) & custom SCSS (Bootstrap-based)
 
 ## Development
 
 Run the dev server:
 
-```shellscript
+```sh
 npm run dev
 ```
 
@@ -24,17 +40,8 @@ Then run the app in production mode:
 npm start
 ```
 
-Now you'll need to pick a host to deploy it to.
+## Project Status
 
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+- Core e-commerce browsing and cart features implemented
+- No user authentication or checkout yet
+- Ready for further development and feature expansion
