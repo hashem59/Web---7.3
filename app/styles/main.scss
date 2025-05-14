@@ -1,0 +1,108 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+// Modern Ecommerce Color Palette
+$primary: #27ae60; // Modern green
+$secondary: #f6c343; // Soft gold
+$success: #43b581; // Fresh green
+$info: #3498db; // Calm blue
+$warning: #f9ca24; // Bright yellow
+$danger: #e74c3c; // Strong red
+$light: #f8f9fa; // Very light gray
+$dark: #212529; // Deep charcoal
+
+// Accent and background
+$body-bg: #f5f7fa;
+$body-color: #222;
+$border-radius: 0.75rem;
+$font-family-base: "Inter", "Segoe UI", Arial, sans-serif;
+
+// Button customizations
+$btn-border-radius: 0.5rem;
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 2rem;
+
+// Shadows and gradients
+$enable-shadows: true;
+$enable-gradients: true;
+
+//
+// Bring in Bootstrap
+//
+
+// Option 1
+//
+// Import all of Bootstrap's CSS
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+//
+// Custom styles
+//
+
+/* body {
+  padding: 1.5rem;
+}
+ */
+
+// Modern vibrant button styles
+.btn-primary {
+  background: linear-gradient(135deg, #27ae60 0%, #43b581 100%);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(39, 174, 96, 0.15);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(135deg, #43b581 0%, #27ae60 100%);
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(39, 174, 96, 0.25);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #f6c343 0%, #f9ca24 100%);
+  color: #222;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(246, 195, 67, 0.12);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background: linear-gradient(135deg, #f9ca24 0%, #f6c343 100%);
+  color: #222;
+  box-shadow: 0 6px 24px rgba(246, 195, 67, 0.22);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.btn-outline-primary {
+  color: #27ae60;
+  border: 2px solid #27ae60;
+  background: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(39, 174, 96, 0.08);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background: linear-gradient(135deg, #27ae60 0%, #43b581 100%);
+  color: #fff;
+  border-color: #27ae60;
+  box-shadow: 0 4px 16px rgba(39, 174, 96, 0.18);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.thumbnail-img {
+  max-width: 120px;
+}

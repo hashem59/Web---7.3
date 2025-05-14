@@ -1,0 +1,227 @@
+/* Custom styles can go here */
+/* Custom styles for Grocery Shop */
+
+/* General styles */
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* Header styles */
+.navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navbar .input-group {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Carousel */
+#heroCarousel {
+  margin-top: -1px; /* Fix for border overlap */
+}
+
+#heroCarousel .carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  background: #f8f9fa;
+}
+
+#heroCarousel .carousel-item img {
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#heroCarousel .carousel-content {
+  background: #212529;
+  background: linear-gradient(90deg, #212529 90%, transparent 100%);
+  color: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+#heroCarousel .carousel-indicators {
+  margin-bottom: 2rem;
+}
+
+#heroCarousel .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 6px;
+}
+
+#heroCarousel .carousel-control-prev,
+#heroCarousel .carousel-control-next {
+  width: 5%;
+}
+
+/* Category navigation */
+.category-nav a {
+  transition: transform 0.2s;
+}
+
+.category-nav a:hover {
+  transform: translateY(-5px);
+}
+
+/* Product cards */
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Weekly specials */
+.weekly-specials {
+  background: linear-gradient(45deg, #0d6efd, #0a58ca);
+}
+
+/* Seasonal promotions */
+.seasonal-promotions .card {
+  background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+}
+
+/* Recipe inspiration */
+.recipe-inspiration .card-img-top {
+  height: 180px;
+}
+
+/* Info highlights */
+.info-highlights i {
+  transition: transform 0.2s;
+}
+
+.info-highlights i:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background-color: #212529;
+}
+
+footer a {
+  transition: opacity 0.2s;
+}
+
+footer a:hover {
+  opacity: 0.8;
+}
+
+/* Cart drawer */
+.offcanvas {
+  width: 400px;
+}
+
+.offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cart-items {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 1rem;
+}
+
+.cart-summary {
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+  padding-top: 1rem;
+  border-top: 1px solid #dee2e6;
+  z-index: 10;
+}
+
+@media (max-width: 576px) {
+  .offcanvas {
+    width: 100%;
+  }
+
+  #heroCarousel .carousel-item {
+    min-height: 250px;
+  }
+
+  #heroCarousel .carousel-content {
+    padding: 1rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+  }
+
+  #heroCarousel .carousel-item img {
+    max-height: 140px;
+  }
+
+  #heroCarousel h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    text-align: center;
+  }
+
+  .hero-section img {
+    margin-top: 2rem;
+  }
+
+  .category-nav .col-6 {
+    margin-bottom: 1rem;
+  }
+
+  #heroCarousel .carousel-item {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #heroCarousel .carousel-content {
+    padding: 1.5rem 1rem;
+    border-radius: 0.75rem;
+    background: #212529;
+    background: linear-gradient(180deg, #212529 95%, transparent 100%);
+    text-align: center;
+  }
+  #heroCarousel .carousel-item {
+    flex-direction: column;
+    min-height: 350px;
+  }
+  #heroCarousel .carousel-item img {
+    max-height: 220px;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
