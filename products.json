@@ -1,0 +1,559 @@
+[
+  {
+    "id": 1,
+    "slug": "coles-im-perfect-apples-prepacked-2kg",
+    "category": "Fruits & Vegetables",
+    "name": "Coles I'M Perfect Apples Prepacked 2kg",
+    "price": 6.9,
+    "pricePer": "$3.45/kg",
+    "image": [
+      "/public/images/coles-im-perfect-apples-prepacked-2kg.jpg",
+      "/public/images/perfect-apples.jpg"
+    ],
+    "thumbnails": [
+      "/public/images/coles-im-perfect-apples-prepacked-2kg.jpg",
+      "/public/images/perfect-apples.jpg"
+    ],
+    "rating": 4,
+    "reviews": 75,
+    "notes": [
+      {
+        "icon": "bi bi-truck text-success",
+        "text": "Check availability for delivery"
+      },
+      {
+        "icon": "bi bi-info-circle text-primary",
+        "text": "Australian Grown. Varieties may vary."
+      }
+    ],
+    "description": "A mix of perfectly imperfect Australian apples, helping to reduce food waste. Sizes, shapes, and colours may vary depending on the season, but they taste just as delicious!",
+    "details": {
+      "details": [
+        "2kg prepacked bag",
+        "Supports farmers by selling more of their crop",
+        "Reduces food waste"
+      ],
+      "text": "Our I'm Perfect Apples are quirky and come in various sizes, shapes, and colours. They are Australian grown and help prevent quality fresh produce from going to waste.",
+      "ingredients": ["Apple (100%)"],
+      "ingredientsNote": "Varieties may vary.",
+      "storage": "Best kept refrigerated to maintain freshness."
+    }
+  },
+  {
+    "id": 2,
+    "slug": "coles-cavendish-bananas",
+    "category": "Fruits & Vegetables",
+    "name": "Coles Cavendish Bananas",
+    "price": 0.77,
+    "pricePer": "$4.50/kg (approx. $0.77 each)",
+    "image": [
+      "https://placehold.co/600x500/0d6efd/FFFFFF?text=Cavendish+Bananas"
+    ],
+    "thumbnails": [
+      "https://placehold.co/100x100/0d6efd/FFFFFF?text=Banana+1",
+      "https://placehold.co/100x100/0d6efd/FFFFFF?text=Banana+2"
+    ],
+    "rating": 4.2,
+    "reviews": 110,
+    "notes": [
+      {
+        "icon": "bi bi-truck text-success",
+        "text": "Check availability for delivery"
+      },
+      {
+        "icon": "bi bi-info-circle text-primary",
+        "text": "Price is per kilogram, individual weight may vary."
+      }
+    ],
+    "description": "Fresh and nutritious Cavendish bananas, a great source of potassium and energy. Perfect for snacking, smoothies, or baking.",
+    "details": {
+      "details": [
+        "Sold individually, priced per kg",
+        "Good source of potassium",
+        "Versatile fruit"
+      ],
+      "text": "Coles Cavendish Bananas are a popular choice for their sweet taste and creamy texture. Sourced with quality in mind.",
+      "ingredients": ["Banana (100%)"],
+      "ingredientsNote": "No additives.",
+      "storage": "Store at room temperature. To slow ripening, refrigerate (skin may darken)."
+    }
+  },
+  {
+    "id": 3,
+    "slug": "coles-carrots-prepacked-1kg",
+    "category": "Fruits & Vegetables",
+    "name": "Coles Carrots Prepacked 1kg",
+    "price": 2.6,
+    "pricePer": "$2.60/kg",
+    "image": ["https://placehold.co/600x500/0d6efd/FFFFFF?text=Coles+Carrots"],
+    "thumbnails": ["https://placehold.co/100x100/0d6efd/FFFFFF?text=Carrots+1"],
+    "rating": 4.5,
+    "reviews": 95,
+    "notes": [
+      {
+        "icon": "bi bi-truck text-success",
+        "text": "Check availability for delivery"
+      },
+      { "icon": "bi bi-info-circle text-primary", "text": "Australian Grown." }
+    ],
+    "description": "Fresh Australian carrots, prepacked for convenience. A versatile vegetable, great for cooking, snacking, or juicing.",
+    "details": {
+      "details": [
+        "1kg prepacked bag",
+        "Source of Beta-Carotene",
+        "Crisp and sweet"
+      ],
+      "text": "These Australian grown carrots are super versatile and a staple in any kitchen. Best stored in the crisper section of your refrigerator.",
+      "ingredients": ["Carrots (100%)"],
+      "ingredientsNote": "",
+      "storage": "Best kept refrigerated in the crisper drawer."
+    }
+  },
+  {
+    "id": 4,
+    "slug": "coles-organic-broccoli-500g",
+    "category": "Fruits & Vegetables",
+    "name": "Coles Organic Broccoli 500g",
+    "price": 7.9,
+    "pricePer": "$15.80/kg",
+    "image": [
+      "https://placehold.co/600x500/0d6efd/FFFFFF?text=Organic+Broccoli"
+    ],
+    "thumbnails": [
+      "https://placehold.co/100x100/0d6efd/FFFFFF?text=Broccoli+1"
+    ],
+    "rating": 4.3,
+    "reviews": 60,
+    "notes": [
+      {
+        "icon": "bi bi-truck text-success",
+        "text": "Check availability for delivery"
+      },
+      {
+        "icon": "bi bi-leaf text-success",
+        "text": "Certified Organic. Australian Grown."
+      }
+    ],
+    "description": "Coles Organic Broccoli is certified organic and free from synthetic chemicals. Fresh and nutritious, perfect for steaming, stir-frying, or roasting.",
+    "details": {
+      "details": ["500g pack", "Certified Organic", "Good source of vitamins"],
+      "text": "All Coles Organic produce is certified organic and completely free from synthetic chemicals such as pesticides, herbicides and genetically modified ingredients. Australian Grown.",
+      "ingredients": ["Broccoli (100%)"],
+      "ingredientsNote": "Certified Organic.",
+      "storage": "Keep refrigerated."
+    }
+  },
+  {
+    "id": 5,
+    "slug": "lilydale-free-range-chicken-breast-fillets-bulk-1kg",
+    "category": "Meat & Seafood",
+    "name": "Lilydale Free Range Chicken Breast Fillets Bulk Pack approx. 1kg",
+    "price": 18.9,
+    "pricePer": "$21.00/kg (price based on final weight)",
+    "image": [
+      "/public/images/lilydale-free-range-chicken-breast-fillets-bulk-1kg.jpg"
+    ],
+    "thumbnails": [
+      "/public/images/lilydale-free-range-chicken-breast-fillets-bulk-1kg.jpg"
+    ],
+    "rating": 4.7,
+    "reviews": 150,
+    "notes": [
+      {
+        "icon": "bi bi-truck text-success",
+        "text": "Check availability for delivery"
+      },
+      {
+        "icon": "bi bi-info-circle text-primary",
+        "text": "Raised without antibiotics. No added hormones."
+      }
+    ],
+    "description": "Lilydale Free Range Chicken Breast Fillets are sourced from chickens raised without antibiotics and with no added hormones. Versatile for many recipes.",
+    "details": {
+      "details": ["Approx. 1kg bulk pack", "Free Range", "Australian Grown"],
+      "text": "No added hormones, no added growth promotants. No artificial colours or flavours. No added preservatives.",
+      "ingredients": ["Free Range Chicken Breast Fillet (100%)"],
+      "ingredientsNote": "",
+      "storage": "Keep refrigerated. Store at or below 4°C."
+    }
+  },
+  {
+    "id": 6,
+    "slug": "drovers-big-pack-value-beef-mince-2kg",
+    "category": "Meat & Seafood",
+    "name": "Drovers Big Pack Value Beef Mince 2kg",
+    "price": 21,
+    "pricePer": "$10.50/kg",
+    "image": ["https://placehold.co/600x500/0d6efd/FFFFFF?text=Beef+Mince"],
+    "thumbnails": ["https://placehold.co/100x100/0d6efd/FFFFFF?text=Mince+1"],
+    "rating": 4.4,
+    "reviews": 120,
+    "notes": [
+      {
+        "icon": "bi bi-truck text-success",
+        "text": "Check availability for delivery"
+      },
+      {
+        "icon": "bi bi-info-circle text-primary",
+        "text": "100% Australian Beef. No added hormones."
+      }
+    ],
+    "description": "Drovers Choice Big Pack Value Beef Mince. Made with 100% Australian beef, this large family-size pack is full of flavour and extremely versatile for many dishes.",
+    "details": {
+      "details": [
+        "2kg large family-size pack",
+        "100% Australian beef",
+        "No added hormones"
+      ],
+      "text": "Coles partners with Australian farmers who share our passion for quality, great tasting beef. Perfect for burgers, meatballs, lasagnas, and more.",
+      "ingredients": ["Australian Beef (100%)"],
+      "ingredientsNote": "",
+      "storage": "Keep refrigerated or freeze for later use. If frozen, thaw in refrigerator."
+    }
+  },
+  {
+    "id": 7,
+    "slug": "coles-frozen-salmon-fillets-1kg",
+    "category": "Meat & Seafood",
+    "name": "Coles Frozen Salmon Fillets 1kg",
+    "price": 38.5,
+    "pricePer": "$38.50/kg",
+    "image": ["https://placehold.co/600x500/0d6efd/FFFFFF?text=Salmon+Fillets"],
+    "thumbnails": ["https://placehold.co/100x100/0d6efd/FFFFFF?text=Salmon+1"],
+    "rating": 4.6,
+    "reviews": 90,
+    "notes": [
+      {
+        "icon": "bi bi-truck text-success",
+        "text": "Check availability for delivery"
+      },
+      {
+        "icon": "bi bi-snow text-info",
+        "text": "Individually wrapped for freshness. Frozen."
+      }
+    ],
+    "description": "Rich, flaky Atlantic salmon fillets, individually wrapped for freshness. A good source of Protein & Omega 3. Must be cooked thoroughly prior to consumption.",
+    "details": {
+      "details": [
+        "1kg pack (contains multiple fillets)",
+        "Good source of Omega-3",
+        "Skin on or skinless may vary"
+      ],
+      "text": "Farmed Atlantic Salmon (Salmo salar). Thaw prior to cooking. Oven bake or pan fry.",
+      "ingredients": ["Farmed Atlantic Salmon (Salmo salar) (100%) (Fish)"],
+      "ingredientsNote": "Contains Fish. Packed in Poland.",
+      "storage": "Keep frozen. Store at or below minus 18°C. Thaw in refrigerator."
+    }
+  },
+  {
+    "id": 8,
+    "slug": "coles-prawns-cooked-peeled-tail-off-750g",
+    "category": "Meat & Seafood",
+    "name": "Coles Prawns Cooked Peeled Tail Off 750g",
+    "price": 22,
+    "pricePer": "$29.33/kg",
+    "image": ["https://placehold.co/600x500/0d6efd/FFFFFF?text=Cooked+Prawns"],
+    "thumbnails": ["https://placehold.co/100x100/0d6efd/FFFFFF?text=Prawns+1"],
+    "rating": 4.1,
+    "reviews": 70,
+    "notes": [
+      {
+        "icon": "bi bi-truck text-success",
+        "text": "Check availability for delivery"
+      },
+      {
+        "icon": "bi bi-check-circle text-primary",
+        "text": "Ready to eat once thawed. Good source of protein."
+      }
+    ],
+    "description": "Naturally sweet warm water prawns, cooked, peeled, and with tails off for convenience. A great addition to your favourite dishes or as a simple snack.",
+    "details": {
+      "details": ["750g pack", "Cooked and peeled, tail off", "Thaw and serve"],
+      "text": "These prawns are ready to eat once thawed. Keep refrigerated until use and consume within 2 days of thawing. Once thawed do not refreeze.",
+      "ingredients": [
+        "Cooked Prawns (100%) [Farmed Vannamei Prawns (Litopenaeus vannamei) (99%) (Crustacean), Salt, Acidity Regulators (500, 330), Dextrin]"
+      ],
+      "ingredientsNote": "Contains Crustacean. Made in Vietnam. Despite careful inspection some fragments of shell may remain.",
+      "storage": "Keep Frozen. Store at or below minus 18°C."
+    }
+  },
+  {
+    "id": 9,
+    "slug": "coles-bakery-white-loaf-800g",
+    "category": "Bakery",
+    "name": "Coles Bakery White Loaf 800g",
+    "price": 3.6,
+    "pricePer": "$0.45/100g",
+    "image": ["/public/images/coles-bakery-white-loaf-800g.jpg"],
+    "thumbnails": ["/public/images/coles-bakery-white-loaf-800g.jpg"],
+    "rating": 4,
+    "reviews": 88,
+    "notes": [
+      {
+        "icon": "bi bi-truck text-success",
+        "text": "Check availability for delivery"
+      },
+      {
+        "icon": "bi bi-info-circle text-primary",
+        "text": "Baked in-store or sourced from local bakers."
+      }
+    ],
+    "description": "A classic soft white bread loaf from Coles Bakery, perfect for sandwiches, toast, or a side with your meal. Made in Australia.",
+    "details": {
+      "details": ["800g loaf", "Soft texture", "Versatile for daily use"],
+      "text": "Breakfast, lunch, dinner or a snack in between - a good sandwich or toasty can fill the gap. Made in Australia from at least 95% Australian ingredients.",
+      "ingredients": [
+        "Wheat Flour [Wheat Flour, Thiamin, Folic Acid], Water, Yeast, Vinegar, Canola Oil, Iodised Salt, Wheat Gluten, Natural Preservative (Fermented Wheat Flour), Soy Flour, Antioxidant (300), Enzyme (Wheat)"
+      ],
+      "ingredientsNote": "Contains Wheat, Soy, Gluten. May Contain Sesame. No Artificial Flavours or Colours.",
+      "storage": "Store in a cool, dry place. Suitable for freezing."
+    }
+  },
+  {
+    "id": 10,
+    "slug": "coles-all-butter-croissants-4-pack-168g",
+    "category": "Bakery",
+    "name": "Coles All Butter Croissants 4 Pack 168g",
+    "price": 2.95,
+    "pricePer": "$1.76/100g (approx. $0.74 each)",
+    "image": ["https://placehold.co/600x500/0d6efd/FFFFFF?text=Croissants"],
+    "thumbnails": [
+      "https://placehold.co/100x100/0d6efd/FFFFFF?text=Croissant+1"
+    ],
+    "rating": 4.5,
+    "reviews": 65,
+    "notes": [
+      {
+        "icon": "bi bi-truck text-success",
+        "text": "Check availability for delivery"
+      },
+      {
+        "icon": "bi bi-egg-fried text-warning",
+        "text": "Made with real butter."
+      }
+    ],
+    "description": "Flaky and delicious all-butter croissants from Coles Bakery. Perfect for a breakfast treat or a light snack. Ready to eat or warm in the oven.",
+    "details": {
+      "details": ["4 pack, 168g total", "Made with butter", "Flaky pastry"],
+      "text": "The quintessential French pastry. Bake in the oven for a delicious golden flaky finish. Ready to eat plain or with your favourite filling. Made in Australia from at least 81% Australian ingredients.",
+      "ingredients": [
+        "Wheat Flour [Vitamins (Thiamin, Folic Acid)], Butter (Milk) (18%), Water, Sugar, Iodised Salt, Yeast, Wheat Gluten, Improver [Wheat Flour, Mineral Salt (170), Vegetable Emulsifiers (471, 472e), Thickeners (412, 415)], Barley Malt Flour"
+      ],
+      "ingredientsNote": "Contains Wheat, Milk, Gluten. May Contain Pecan, Egg, Sesame, Almond, Hazelnut. No Artificial Flavours or Colours. Previously frozen, not suitable for freezing.",
+      "storage": "Once opened, store in an airtight container. Store in a cool, dry place."
+    }
+  },
+  {
+    "id": 11,
+    "slug": "coles-bakery-double-choc-muffins-4-pack",
+    "category": "Bakery",
+    "name": "Coles Bakery Double Choc Muffins 4 Pack",
+    "price": 4.9,
+    "pricePer": "$1.17/100g (approx. $1.23 each)",
+    "image": ["https://placehold.co/600x500/0d6efd/FFFFFF?text=Choc+Muffins"],
+    "thumbnails": ["https://placehold.co/100x100/0d6efd/FFFFFF?text=Muffin+1"],
+    "rating": 4.2,
+    "reviews": 72,
+    "notes": [
+      {
+        "icon": "bi bi-truck text-success",
+        "text": "Check availability for delivery"
+      },
+      {
+        "icon": "bi bi-info-circle text-primary",
+        "text": "Loaded with chocolate chips."
+      }
+    ],
+    "description": "Soft, fluffy muffins from Coles Bakery, loaded with delicious chocolate chips. A must-try for any chocolate lover, perfect as a snack or dessert.",
+    "details": {
+      "details": [
+        "4 pack",
+        "Rich chocolate flavour",
+        "Soft and fluffy texture"
+      ],
+      "text": "Grab one of these muffins if you're rushing out the door, craving a tasty snack or dessert after a meal. Made in Australia from at least 85% Australian ingredients.",
+      "ingredients": [
+        "Wheat Flour, Water, Sugar, Canola Oil, Dark Chocolate (12%) (Cocoa Solids (50%) (Cocoa Liquor^, Cocoa Butter^, Cocoa Powder^), Sugar, Emulsifier (Sunflower Lecithin), Natural Flavour), Cocoa Powder^ (2.5%), Egg Powder, Humectant (422 from Palm**), Whey Powder (Milk), Raising Agents (450, 501 (from Palm**))"
+      ],
+      "ingredientsNote": "Contains Wheat, Egg, Milk, Gluten. May Contain Pecan, Sesame, Soy, Brazil nut, Macadamia, Pistachio, Walnut, Almond, Hazelnut, Peanut. No Artificial Flavours or Colours.",
+      "storage": "Store in a cool, dry place. Once opened, store in an airtight container."
+    }
+  },
+  {
+    "id": 12,
+    "slug": "coles-bakery-wholemeal-bread-loaf-680g",
+    "category": "Bakery",
+    "name": "Coles Bakery Wholemeal Bread Loaf 680g",
+    "price": 3,
+    "pricePer": "$0.44/100g",
+    "image": ["/public/images/coles-bakery-wholemeal-bread-loaf-680g.jpg"],
+    "thumbnails": ["/public/images/coles-bakery-wholemeal-bread-loaf-680g.jpg"],
+    "rating": 4.3,
+    "reviews": 80,
+    "notes": [
+      {
+        "icon": "bi bi-truck text-success",
+        "text": "Check availability for delivery"
+      },
+      { "icon": "bi bi-grain text-success", "text": "Good source of fibre." }
+    ],
+    "description": "A wholesome and tasty wholemeal bread loaf from Coles Bakery. Perfect for sandwiches or toast, offering a good source of fibre.",
+    "details": {
+      "details": [
+        "680g loaf",
+        "Made with wholemeal flour",
+        "No artificial colours or flavours"
+      ],
+      "text": "This wholemeal bread is a great choice for a healthier option without compromising on taste. Made in Australia.",
+      "ingredients": [
+        "Wholemeal Wheat Flour (55%), Water, Wheat Flour, Yeast, Vinegar, Wheat Gluten, Iodised Salt, Canola Oil, Fermented Wheat Flour, Soy Flour, Malted Barley, Vitamins (Thiamin, Folic Acid), Processing Aid (Wheat)"
+      ],
+      "ingredientsNote": "Contains Wheat, Soy, Gluten. May Contain Sesame. No Artificial Flavours or Colours.",
+      "storage": "Store in a cool, dry place, out of direct sunlight."
+    }
+  },
+  {
+    "id": 13,
+    "slug": "coles-full-cream-milk-2l",
+    "category": "Dairy & Eggs",
+    "name": "Coles Full Cream Milk 2L",
+    "price": 3.1,
+    "pricePer": "$1.55/L",
+    "image": [
+      "https://placehold.co/600x500/0d6efd/FFFFFF?text=Full+Cream+Milk"
+    ],
+    "thumbnails": ["https://placehold.co/100x100/0d6efd/FFFFFF?text=Milk+1"],
+    "rating": 4.8,
+    "reviews": 250,
+    "notes": [
+      {
+        "icon": "bi bi-truck text-success",
+        "text": "Check availability for delivery"
+      },
+      {
+        "icon": "bi bi-check-circle text-primary",
+        "text": "Source of Calcium. Permeate free."
+      }
+    ],
+    "description": "Fresh and creamy Coles Full Cream Milk. A good source of calcium, perfect for drinking, with cereal, or in your tea and coffee.",
+    "details": {
+      "details": [
+        "2 Litre bottle",
+        "Homogenised and Pasteurised",
+        "Australian milk"
+      ],
+      "text": "Coles Full Cream Milk is a household staple, providing essential nutrients. Sourced from Australian dairy farms.",
+      "ingredients": ["Homogenised and Pasteurised Full Cream Milk."],
+      "ingredientsNote": "Contains Milk.",
+      "storage": "Keep refrigerated. Store at or below 5°C. Keep this way up."
+    }
+  },
+  {
+    "id": 14,
+    "slug": "coles-simply-cheddar-cheese-block-1kg",
+    "category": "Dairy & Eggs",
+    "name": "Coles Simply Cheddar Cheese Block 1kg",
+    "price": 9.9,
+    "pricePer": "$9.90/kg",
+    "image": ["https://placehold.co/600x500/0d6efd/FFFFFF?text=Cheddar+Cheese"],
+    "thumbnails": ["https://placehold.co/100x100/0d6efd/FFFFFF?text=Cheese+1"],
+    "rating": 4.5,
+    "reviews": 180,
+    "notes": [
+      {
+        "icon": "bi bi-truck text-success",
+        "text": "Check availability for delivery"
+      },
+      {
+        "icon": "bi bi-info-circle text-primary",
+        "text": "Made with Australian milk. Mild strength."
+      }
+    ],
+    "description": "Coles Simply Cheddar Cheese Block, a versatile mild strength cheddar perfect for slicing, grating, or cooking. Made in Australia from at least 99% Australian ingredients.",
+    "details": {
+      "details": [
+        "1kg block",
+        "Source of Calcium",
+        "No artificial colours or flavours"
+      ],
+      "text": "This cheddar cheese is a great value option for families. Ideal for sandwiches, cheese boards, or adding to your favourite recipes.",
+      "ingredients": [
+        "Pasteurised Milk, Starter Culture (Milk), Salt, Mineral Salt (509), Enzyme (Vegetarian Rennet)."
+      ],
+      "ingredientsNote": "Contains Milk. No Artificial Flavours or Colours.",
+      "storage": "Keep refrigerated. Store at or below 5°C."
+    }
+  },
+  {
+    "id": 15,
+    "slug": "coles-free-range-eggs-12-pack-600g",
+    "category": "Dairy & Eggs",
+    "name": "Coles Free Range Eggs 12 Pack 600g",
+    "price": 6.2,
+    "pricePer": "$1.03/100g (approx. $0.52 per egg)",
+    "image": [
+      "https://placehold.co/600x500/0d6efd/FFFFFF?text=Free+Range+Eggs"
+    ],
+    "thumbnails": ["https://placehold.co/100x100/0d6efd/FFFFFF?text=Eggs+1"],
+    "rating": 4.6,
+    "reviews": 200,
+    "notes": [
+      {
+        "icon": "bi bi-truck text-success",
+        "text": "Check availability for delivery"
+      },
+      {
+        "icon": "bi bi-info-circle text-primary",
+        "text": "Free range. Source of Iron."
+      }
+    ],
+    "description": "Coles Free Range Eggs, a dozen pack from hens that have access to the outdoors. A versatile ingredient for breakfast, baking, or any meal.",
+    "details": {
+      "details": [
+        "12 pack, 600g (average 50g per egg)",
+        "Laid by free range hens",
+        "Australian eggs"
+      ],
+      "text": "These free-range eggs are a staple for any kitchen. Not to be consumed raw, cook prior to serving.",
+      "ingredients": ["Eggs"],
+      "ingredientsNote": "Contains Egg.",
+      "storage": "Keep refrigerated after purchase to maintain freshness."
+    }
+  },
+  {
+    "id": 16,
+    "slug": "coles-greek-style-natural-yoghurt-1kg",
+    "category": "Dairy & Eggs",
+    "name": "Coles Greek Style Natural Yoghurt 1kg",
+    "price": 4,
+    "pricePer": "$0.40/100g",
+    "image": ["/public/images/coles-greek-style-natural-yoghurt-1kg.png"],
+    "thumbnails": ["/public/images/coles-greek-style-natural-yoghurt-1kg.png"],
+    "rating": 4.7,
+    "reviews": 190,
+    "notes": [
+      {
+        "icon": "bi bi-truck text-success",
+        "text": "Check availability for delivery"
+      },
+      {
+        "icon": "bi bi-info-circle text-primary",
+        "text": "Made with Australian milk. No added sugar. Source of Calcium."
+      }
+    ],
+    "description": "Thick and creamy Coles Greek Style Natural Yoghurt. Perfect on its own, with fruit and muesli, or as an ingredient in cooking and baking. No added sugar.",
+    "details": {
+      "details": [
+        "1kg tub",
+        "Thick and creamy texture",
+        "No artificial flavours or colours"
+      ],
+      "text": "Made in Australia from at least 99% Australian ingredients. This Greek style yoghurt is a versatile and healthy option.",
+      "ingredients": [
+        "Skimmed Milk, Cream (Milk), Milk Solids, Live Yoghurt Cultures (Milk)."
+      ],
+      "ingredientsNote": "Contains Milk. No Artificial Flavours or Colours.",
+      "storage": "Keep refrigerated. Store at or below 5°C."
+    }
+  }
+]

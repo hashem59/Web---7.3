@@ -2,6 +2,29 @@ import { json, LoaderFunctionArgs, redirect } from "@remix-run/node";
 import { MetaFunction, useLoaderData } from "@remix-run/react";
 import { useState, useEffect } from "react";
 import ProductsList from "../../components/ProductsList";
+import db from "../../db.server";
+
+type Product = {
+  id: number;
+  slug: string;
+  category: string;
+  name: string;
+  price: number;
+  pricePer: string;
+  image: string[];
+  thumbnails: string[];
+  rating: number;
+  reviews: number;
+  notes: Array<{ icon: string; text: string }>;
+  description: string;
+  details: {
+    details: string[];
+    text: string;
+    ingredients: string[];
+    ingredientsNote: string;
+    storage: string;
+  };
+};
 
 export const meta: MetaFunction = () => {
   return [
@@ -13,18 +36,54 @@ export const meta: MetaFunction = () => {
 import { productsPlaceholders } from "../../data/products";
 
 export async function loader({ params, context }: LoaderFunctionArgs) {
-  const product = productsPlaceholders.find(
-    (product) => product.slug === params.slug
-  );
-  return json(product);
+  console.log("params.slug", params.slug);
+  const product = await new Promise<any>((resolve, reject) => {
+    db.get(
+      "SELECT * FROM products WHERE slug = ?",
+      [params.slug],
+      (err, row) => {
+        if (err) return reject(err);
+        resolve(row);
+      }
+    );
+  });
+  if (!product) return json(null);
+  const parseField = (field: any) => {
+    if (typeof field === "string") {
+      try {
+        return JSON.parse(field);
+      } catch {
+        return field;
+      }
+    }
+    return field;
+  };
+  console.log("product", product);
+  const parsedProduct: Product = {
+    id: product.id,
+    slug: product.slug,
+    category: product.category,
+    name: product.name,
+    price: product.price,
+    pricePer: product.pricePer,
+    image: parseField(product.image),
+    thumbnails: parseField(product.thumbnails),
+    rating: product.rating,
+    reviews: product.reviews,
+    notes: parseField(product.notes),
+    description: product.description,
+    details: parseField(product.details),
+  };
+  console.log("parsedProduct", parsedProduct);
+  return json(parsedProduct);
 }
 
 export default function Product() {
   const product = useLoaderData<typeof loader>();
-  const [mainImage, setMainImage] = useState(product?.image[0]);
+  const [mainImage, setMainImage] = useState(product?.image?.[0]);
   const [added, setAdded] = useState(false);
   useEffect(() => {
-    setMainImage(product?.image[0]);
+    setMainImage(product?.image?.[0]);
   }, [product]);
   if (!product) {
     return (

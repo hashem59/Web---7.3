@@ -1,6 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Form, useActionData } from "@remix-run/react";
 import { json, type ActionFunctionArgs } from "@remix-run/node";
+import db from "../../db.server";
 
 export const meta: MetaFunction = () => {
   return [
@@ -44,6 +45,28 @@ export async function action({ request }: ActionFunctionArgs) {
 
   if (Object.keys(errors).length > 0) {
     return json({ success: false, errors }, { status: 400 });
+  }
+
+  // Insert into contact_forms table
+  try {
+    await new Promise((resolve, reject) => {
+      db.run(
+        `INSERT INTO contact_forms (name, email, phone, subject, message, privacy) VALUES (?, ?, ?, ?, ?, ?)`,
+        [name, email, phone, subject, message, privacy ? 1 : 0],
+        function (err) {
+          if (err) return reject(err);
+          resolve(this.lastID);
+        }
+      );
+    });
+  } catch (err) {
+    return json(
+      {
+        success: false,
+        errors: { db: "Failed to save your message. Please try again later." },
+      },
+      { status: 500 }
+    );
   }
 
   return json({ success: true });
