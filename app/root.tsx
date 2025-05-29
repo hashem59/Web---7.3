@@ -5,10 +5,11 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import type { LinksFunction } from "@remix-run/node";
+import type { DataFunctionArgs, LinksFunction } from "@remix-run/node";
 import CartDrawer from "./components/CartDrawer";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { CartProvider } from "./context/CartContext";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -27,7 +28,7 @@ export const links: LinksFunction = () => [
   {
     rel: "icon",
     type: "image/png",
-    href: "/favicon.png",
+    href: "/public/favicon.png",
   },
 ];
 
@@ -41,15 +42,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <Header />
-        {children}
-        <Footer />
-        <ScrollRestoration />
-        <CartDrawer />
-        <Scripts />
-        {/* Initialize Bootstrap JavaScript */}
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+        <CartProvider>
+          <Header />
+          {children}
+          <Footer />
+          <ScrollRestoration />
+          <CartDrawer />
+          <Scripts />
+          {/* Initialize Bootstrap JavaScript */}
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+        </CartProvider>
       </body>
     </html>
   );

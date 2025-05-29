@@ -3,6 +3,7 @@ import { MetaFunction, useLoaderData } from "@remix-run/react";
 import { useState, useEffect } from "react";
 import ProductsList from "../../components/ProductsList";
 import db from "../../db.server";
+import { Form, Link, useFetcher, useNavigation } from "@remix-run/react";
 
 type Product = {
   id: number;
@@ -36,7 +37,6 @@ export const meta: MetaFunction = () => {
 import { productsPlaceholders } from "../../data/products";
 
 export async function loader({ params, context }: LoaderFunctionArgs) {
-  console.log("params.slug", params.slug);
   const product = await new Promise<any>((resolve, reject) => {
     db.get(
       "SELECT * FROM products WHERE slug = ?",
@@ -58,7 +58,7 @@ export async function loader({ params, context }: LoaderFunctionArgs) {
     }
     return field;
   };
-  console.log("product", product);
+
   const parsedProduct: Product = {
     id: product.id,
     slug: product.slug,
@@ -74,17 +74,34 @@ export async function loader({ params, context }: LoaderFunctionArgs) {
     description: product.description,
     details: parseField(product.details),
   };
-  console.log("parsedProduct", parsedProduct);
+  //console.log("parsedProduct", parsedProduct);
   return json(parsedProduct);
 }
 
 export default function Product() {
   const product = useLoaderData<typeof loader>();
   const [mainImage, setMainImage] = useState(product?.image?.[0]);
-  const [added, setAdded] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  let fetcher = useFetcher({ key: "add-to-cart" });
+
   useEffect(() => {
     setMainImage(product?.image?.[0]);
   }, [product]);
+
+  // Show success message for 3 seconds
+  useEffect(() => {
+    if (fetcher.data && (fetcher.data as any).success) {
+      setShowSuccess(true);
+      const timer = setTimeout(() => setShowSuccess(false), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [fetcher.data]);
+
+  let isAdding =
+    fetcher.state === "submitting" &&
+    fetcher.formMethod === "POST" &&
+    Boolean(fetcher.formData && fetcher.formData.get("add"));
+
   if (!product) {
     return (
       <section className="product-details py-5">
@@ -220,56 +237,38 @@ export default function Product() {
                   </div>
 
                   <div className="add-to-cart-button">
-                    <div className="d-grid gap-2">
-                      <button
-                        className="btn btn-primary btn-lg show-quantity-picker"
-                        onClick={() => {
-                          const stored = localStorage.getItem("cart");
-                          let cart: Array<{ slug: string; quantity: number }> =
-                            [];
-                          try {
-                            cart = stored ? JSON.parse(stored) : [];
-                          } catch {
-                            cart = [];
-                          }
-                          // Find if product is already in cart
-                          const idx = cart.findIndex(
-                            (item: any) => item.slug === product.slug
-                          );
-                          if (idx !== -1) {
-                            cart[idx].quantity += 1;
-                          } else {
-                            cart.push({ slug: product.slug, quantity: 1 });
-                          }
-                          localStorage.setItem("cart", JSON.stringify(cart));
-                          setAdded(true);
-                          setTimeout(() => setAdded(false), 1200);
-                          // Open the cart drawer
-                          if (
-                            typeof window !== "undefined" &&
-                            (window as any).bootstrap &&
-                            document
-                          ) {
-                            const drawer =
-                              document.getElementById("cartDrawer");
-                            if (drawer) {
-                              const offcanvas = (
-                                window as any
-                              ).bootstrap.Offcanvas.getOrCreateInstance(drawer);
-                              offcanvas.show();
-                            }
-                          }
-                          // Notify cart drawer to re-render
-                          window.dispatchEvent(new Event("cartUpdated"));
-                        }}
-                      >
-                        <i className="bi bi-cart-plus me-2"></i>
-                        {added ? "Added!" : "Add to Cart"}
-                      </button>
-                      <button className="btn btn-outline-primary">
-                        <i className="bi bi-heart me-2"></i>Add to Wishlist
-                      </button>
-                    </div>
+                    <fetcher.Form method="post" action="/cart/add">
+                      <input
+                        type="hidden"
+                        name="product_id"
+                        value={product.id}
+                      />
+                      <input type="hidden" name="quantity" value={1} />
+                      <input type="hidden" name="add" value={1} />
+                      <div className="d-grid gap-2">
+                        <button
+                          type="submit"
+                          className="btn btn-primary btn-lg show-quantity-picker"
+                          disabled={isAdding}
+                        >
+                          <i className="bi bi-cart-plus me-2"></i>
+                          {isAdding ? "Adding ..." : "Add to Cart"}
+                        </button>
+                        <button
+                          className="btn btn-outline-primary"
+                          type="button"
+                        >
+                          <i className="bi bi-heart me-2"></i>Add to Wishlist
+                        </button>
+                      </div>
+                    </fetcher.Form>
+                    {showSuccess &&
+                      fetcher.data &&
+                      (fetcher.data as any).success && (
+                        <div className="alert alert-success mt-2" role="alert">
+                          {(fetcher.data as any).message}
+                        </div>
+                      )}
                   </div>
                 </div>
                 <div className="product-description">

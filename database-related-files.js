@@ -645,7 +645,7 @@ db.all("SELECT * FROM products", (err, rows) => {
   if (err) {
     return console.error('Error reading products:', err.message);
   }
-  console.log('Products:', rows);
+  //console.log('Products:', rows);
 });
 
 import { json, LoaderFunctionArgs, redirect } from "@remix-run/node";
@@ -686,7 +686,7 @@ export const meta: MetaFunction = () => {
 import { productsPlaceholders } from "../../data/products";
 
 export async function loader({ params, context }: LoaderFunctionArgs) {
-  console.log("params.slug", params.slug);
+  //console.log("params.slug", params.slug);
   const product = await new Promise<any>((resolve, reject) => {
     db.get(
       "SELECT * FROM products WHERE slug = ?",
@@ -708,7 +708,7 @@ export async function loader({ params, context }: LoaderFunctionArgs) {
     }
     return field;
   };
-  console.log("product", product);
+  //console.log("product", product);
   const parsedProduct: Product = {
     id: product.id,
     slug: product.slug,
@@ -724,7 +724,7 @@ export async function loader({ params, context }: LoaderFunctionArgs) {
     description: product.description,
     details: parseField(product.details),
   };
-  console.log("parsedProduct", parsedProduct);
+  //console.log("parsedProduct", parsedProduct);
   return json(parsedProduct);
 }
 

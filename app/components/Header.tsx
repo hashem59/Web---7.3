@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useLayoutEffect } from "react";
+import { useCart } from "../context/CartContext";
+import { useFetcher } from "@remix-run/react";
 
 const resources = {
   brand: {
@@ -37,36 +39,11 @@ const resources = {
 };
 
 export default function Header() {
-  const [cartCount, setCartCount] = useState(0);
+  const fetcher = useFetcher({ key: "add-to-cart" });
 
-  const updateCartCount = () => {
-    const stored = localStorage.getItem("cart");
-    let items = [];
-    try {
-      items = stored ? JSON.parse(stored) : [];
-    } catch {
-      items = [];
-    }
-    // items is array of {slug, quantity}
-    const count = items.reduce(
-      (sum: number, item: any) => sum + (item.quantity || 0),
-      0
-    );
-    setCartCount(count);
-  };
-
-  useEffect(() => {
-    updateCartCount();
-    const onStorage = (e: StorageEvent) => {
-      if (e.key === "cart") updateCartCount();
-    };
-    const onCartUpdated = () => updateCartCount();
-    window.addEventListener("storage", onStorage);
-    window.addEventListener("cartUpdated", onCartUpdated);
-    return () => {
-      window.removeEventListener("storage", onStorage);
-      window.removeEventListener("cartUpdated", onCartUpdated);
-    };
+  // synchronize initially
+  useLayoutEffect(() => {
+    fetcher.load("/cart");
   }, []);
 
   return (
@@ -139,7 +116,9 @@ export default function Header() {
                     {...item.extra}
                   >
                     <i className={`${item.icon} fs-5`}></i>
-                    <span className={item.badgeClass}>{cartCount}</span>
+                    <span className="badge bg-primary rounded-pill">
+                      {fetcher.data?.cart?.count}
+                    </span>
                   </a>
                 );
               }
